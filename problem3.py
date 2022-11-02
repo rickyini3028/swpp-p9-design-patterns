@@ -24,6 +24,11 @@ class B:
 
     def __init__(self, value=0):
         # TODO: fill constructor
+        if B._instance is None:
+            B._instance = B._B(value)
+        else:
+            # just update value
+            B._instance.value = value
 
 
 if __name__ == "__main__":
